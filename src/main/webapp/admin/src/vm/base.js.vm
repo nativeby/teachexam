@@ -1,0 +1,6 @@
+const base = {
+    url : "http://43.138.85.8/:8080/${schemaname}/",
+    name: "${schemaname}"
+}
+
+export default base

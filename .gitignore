@@ -1,0 +1,5 @@
+.idea
+.settings
+/target/
+node_modules/*
+ssm1.sql
