@@ -74,7 +74,7 @@ const routes = [{
       }
           ,{
 	path: '/examquestion',
-        name: '试题管理',
+        name: '题库管理',
         component: examquestion
       }
           ,{
