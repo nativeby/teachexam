@@ -43,15 +43,17 @@
 		}
 
 		#header .nav-top-img {
-			width: 124px;
-			height: 40px;
+			/*width: 124px;*/
+			/*height: 40px;*/
+			width: 358px;
+			height: 60px;
 			padding: 0;
 			margin: 0;
 			border-radius: 6px;
 			border-width: 0;
 			border-style: solid;
 			border-color: rgba(0,0,0,.3);
-			box-shadow: 0 0 6px rgba(0,0,0,.3);
+			/*box-shadow: 0 0 6px rgba(0,0,0,.3);*/
 		}
 
 		#header .nav-top-title {
@@ -153,8 +155,8 @@
 		<!-- start 顶部导航栏 -->
 		<div id="header">
 			<div v-if='true' class="nav-top">
-			  <img v-if='false' class="nav-top-img" src='https://www.baidu.com/img/flexible/logo/pc/result@2.png'>
-			  <div v-if="true" class="nav-top-title">{{projectName}}</div>
+			  <img v-if='true' class="nav-top-img" src="img/logo.png" height="60" width="358">
+				<div v-if="true" class="nav-top-title">{{projectName}}</div>
 			  <div class="nav-top-tel"></div>
 			</div>
 		    <div class="navs">
@@ -176,12 +178,15 @@
 
 		<iframe src="./pages/home/home.html" id="iframe" frameborder="0" scrolling="no" width="100%" onload="changeFrameHeight"></iframe>
 
-    <div id="tabbar" v-if="true" class="tabbar" :style='{"padding":"50px 0","boxShadow":"0 0 0px rgba(255,0,0,.8)","margin":"10px 0 0 0","borderColor":"rgba(0,0,0,.3)","backgroundColor":"rgba(27, 27, 27, 1)","borderRadius":"0","borderWidth":"0","borderStyle":"solid"}' style="position: relative;z-index: 999;">
-      <img v-if='false' :style='{"boxShadow":"0 0 6px rgba(255,0,0,.8)","margin":"0 auto","borderColor":"rgba(0,0,0,.3)","borderRadius":"100%","borderWidth":"1px","width":"44px","borderStyle":"solid","height":"44px"}' style='display: block;' src='http://codegen.caihongy.cn/20201024/ed5e326ca66f403aa3197b5fbb4ec733.jpg' />
-      <div :style='{"padding":"0 10px","boxShadow":"0 0 6px rgba(255,0,0,.8)","margin":"10px auto","borderColor":"rgba(0,0,0,1)","backgroundColor":"#000","color":"#fff","textAlign":"center","borderRadius":"0","borderWidth":"0","width":"100%","lineHeight":"32px","fontSize":"14px","borderStyle":"solid"}' class="company"></div>
-      <div :style='{"padding":"0 10px","boxShadow":"0 0 6px rgba(255,0,0,0)","margin":"10px auto","borderColor":"rgba(0,0,0,1)","backgroundColor":"#000","color":"#fff","textAlign":"center","borderRadius":"0","borderWidth":"0","width":"100%","lineHeight":"32px","fontSize":"14px","borderStyle":"solid"}' class="record"></div>
-      <div :style='{"padding":"0 0px","boxShadow":"0 0 px rgba(255,0,0,0)","margin":"0px auto 0px auto","borderColor":"rgba(255,255,255,1)","backgroundColor":"rgba(27, 27, 27, 1)","color":"#fff","textAlign":"center","borderRadius":"0","borderWidth":"0px 0px ","width":"40%","lineHeight":"32px","fontSize":"14px","borderStyle":"solid"}' class="desc"> </div>
-    </div>
+		<div id="tabbar" v-if="true" class="tabbar" :style='{"padding":"20px 0","boxShadow":"0 0 0px rgba(255,0,0,.8)","margin":"10px 0 0 0","borderColor":"rgba(0,0,0,.3)","backgroundColor":"#009688","borderRadius":"0","borderWidth":"0","borderStyle":"solid"}' style="position: relative;z-index: 999;">
+		  <img v-if='false' :style='{"boxShadow":"0 0 6px rgba(255,0,0,.8)","margin":"0 auto","borderColor":"rgba(0,0,0,.3)","borderRadius":"100%","borderWidth":"1px","width":"44px","borderStyle":"solid","height":"44px"}' style='display: block;' src='http://codegen.caihongy.cn/20201024/ed5e326ca66f403aa3197b5fbb4ec733.jpg' />
+		  <div :style='{"padding":"0 10px","margin":"10px auto","borderColor":"rgba(0,0,0,1)","backgroundColor":"#009688","textAlign":"center","borderRadius":"0","borderWidth":"0","width":"100%","lineHeight":"32px","fontSize":"14px","borderStyle":"solid"}' class="company">
+			  <span><i>版权所有：北京大学医学部 北京市海淀区学院路38号</i>    <i>邮编：100191</i></span><br>
+			  <span><i><a href="https://beian.miit.gov.cn" target="_blank">京ICP备05065075号-19</a></i></span>
+		  </div>
+		  <div :style='{"padding":"0 10px","boxShadow":"0 0 6px rgba(255,0,0,0)","margin":"10px auto","borderColor":"rgba(0,0,0,1)","backgroundColor":"#000","color":"#fff","textAlign":"center","borderRadius":"0","borderWidth":"0","width":"100%","lineHeight":"32px","fontSize":"14px","borderStyle":"solid"}' class="record"></div>
+		  <div :style='{"padding":"0 0px","boxShadow":"0 0 px rgba(255,0,0,0)","margin":"0px auto 0px auto","borderColor":"rgba(255,255,255,1)","backgroundColor":"rgba(27, 27, 27, 1)","color":"#fff","textAlign":"center","borderRadius":"0","borderWidth":"0px 0px ","width":"40%","lineHeight":"32px","fontSize":"14px","borderStyle":"solid"}' class="desc"></div>
+		</div>
 
 		<script src="./xznstatic/js/jquery-1.11.3.min.js"></script>
 		<script src="./layui/layui.js"></script>
@@ -189,7 +194,7 @@
 		<script src="./js/config.js"></script>
 
 		<script>
-      var vue1 = new Vue({el: '#tabbar'})
+			var vue1 = new Vue({el: '#tabbar'})
 
 			var vue = new Vue({
 				el: '#header',
@@ -263,23 +268,23 @@
 			var iframeUrl = localStorage.getItem('iframeUrl');
 			document.getElementById('iframe').src = iframeUrl  || './pages/home/home.html';
 
-      // var i = 0;
-      setInterval(function(){
-        // i++;
-        // if(i<50) changeFrameHeight();
-        changeFrameHeight();
-      },200)
+		  // var i = 0;
+		  setInterval(function(){
+			// i++;
+			// if(i<50) changeFrameHeight();
+			changeFrameHeight();
+		  },200)
 
-      function changeFrameHeight() {
-        var iframe = document.getElementById('iframe');
-        // iframe.height = 'auto';
-          if (iframe) {
-              var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
-              if (iframeWin.document.body) {
-                  iframe.height = iframeWin.document.body.scrollHeight;
-              }
-          }
-      };
+		  function changeFrameHeight() {
+			var iframe = document.getElementById('iframe');
+			// iframe.height = 'auto';
+			  if (iframe) {
+				  var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+				  if (iframeWin.document.body) {
+					  iframe.height = iframeWin.document.body.scrollHeight;
+				  }
+			  }
+		  }
 
 			//  窗口变化时候iframe自适应
 			// function changeFrameHeight() {

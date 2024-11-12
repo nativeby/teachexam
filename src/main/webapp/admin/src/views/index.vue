@@ -11,6 +11,7 @@
 	import IndexHeader from '@/components/index/IndexHeader'
 	import IndexAside from '@/components/index/IndexAsideStatic'
 	import IndexMain from '@/components/index/IndexMain'
+  // import IndexFooter from '@/components/index/IndexFooter'
 	export default {
 		components: {
 			IndexHeader,

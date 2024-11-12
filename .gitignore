@@ -1,5 +1,6 @@
-.idea
-.settings
+.idea/
+.settings/
 /target/
-node_modules
+node_modules/
+dist/
 ssm1.sql
