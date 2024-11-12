@@ -1,5 +1,6 @@
 const base = {
-    url : "http://43.138.85.8/:8080/${schemaname}/",
+    ## url : "http://localhost:8080/${schemaname}/",
+    url : "http://43.138.85.8/${schemaname}/",
     name: "${schemaname}"
 }
 

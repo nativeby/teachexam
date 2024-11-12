@@ -65,7 +65,7 @@ var indexNav = [
 },
 ]
 
-var adminurl =  "http://43.138.85.8:8080/ssm/admin/dist/index.html";
+var adminurl =  "http://43.138.85.8/ssm/admin/dist/index.html";
 
 var cartFlag = false
 
