@@ -4,3 +4,4 @@
 node_modules/
 dist/
 ssm1.sql
+config.properties
